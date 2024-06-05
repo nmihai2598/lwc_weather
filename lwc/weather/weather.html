@@ -1,0 +1,22 @@
+<template>
+    <lightning-card if:true={accountData} class="weather-card" variant="Narrow"  title="Current Weather" icon-name="custom:custom60">
+        <template if:true={error}>
+            <span class=error-message>
+                {errorMessage}
+            </span>
+        </template>
+        <lightning-layout if:false={error}>
+            <lightning-layout-item size="1">
+                <img src={weatherImg} alt={weatherDesc}>
+            </lightning-layout-item>
+            <lightning-layout-item size="11" padding="around-small">
+                <div class="weather-address">
+                    <h1 class="weather-city">{currentAccountAddress}</h1>
+                    <h1 class="weather-description">{weatherDesc}</h1>
+                </div>
+                <lightning-badge label={weatherTemp} class="slds-badge_inverse"></lightning-badge>
+            </lightning-layout-item>
+        </lightning-layout>
+        <lightning-spinner if:true={isLoading} alternative-text="Loading" size="small"></lightning-spinner>
+    </lightning-card>
+</template>

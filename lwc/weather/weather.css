@@ -1,0 +1,23 @@
+.weather-address {
+    display: flex;
+    padding: 0.5em;
+}
+
+.weather-city {
+    font-weight: bold;
+    font-size: medium;
+    color: orangered;
+}
+
+.weather-description {
+    padding-top: 0.25em;
+    padding-left: 0.5em;
+    font-weight: bold;
+    font-style: italic;
+    font-size: small;
+}
+.error-message {
+    color: red;             /* Sets the text color to red */
+    font-weight: bold;      /* Makes the text bold */
+    text-align: center;     /* Centers the text */
+  }
